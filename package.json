@@ -16,7 +16,8 @@
   },
   "homepage": "https://github.com/shubham2o/Namaste-React#readme",
   "devDependencies": {
-    "parcel": "^2.9.0"
+    "parcel": "^2.9.1",
+    "process": "^0.11.10"
   },
   "dependencies": {
     "react": "^18.2.0",
