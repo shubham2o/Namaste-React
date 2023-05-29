@@ -55,25 +55,47 @@ const jsxHeading = (
 console.log(jsxHeading);
 root1.render(jsxHeading);
 
-// React Functional Components
+const root2 = ReactDOM.createRoot(document.getElementById("header2"));
+// React Functional Component
 const Title = () => <h3 className="title">I am inside Title</h3>;
 
-const number = 2000000;
-const fullName = "Stephen Curry";
-
 // Component Composition (Component inside component)
+const number = 2000000;
+const fullName = "I am under COMPONENT COMPOSITION.";
+
 const HeadingComponent = () => (
   <div id="container">
-    <h1 className="heading2">Namaste React Functional Component🔥</h1>
+    <h1 className="heading2">Namaste React Functional Component 🔥</h1>
     <Title />
+    <Title></Title>
+    {Title()}
     {jsxHeading}
-    <h3>{number}</h3>
-    {fullName}
     {1 + 2 + 3 + 4 + 5 + 15}
-    {console.log(`Console log inside Functional Component.`)}
+    <h3>{fullName}</h3>
+    {number}
+    {console.log(`You can console log in functional composition too.`)}
   </div>
 );
 console.log(HeadingComponent());
-
-const root2 = ReactDOM.createRoot(document.getElementById("header2"));
 root2.render(<HeadingComponent />);
+
+const root3 = ReactDOM.createRoot(document.getElementById("header3"));
+// React Fragment (Helps to have more than one parent element and it behaves like an empty tag)
+const ReactFrag = () => (
+  // <React.Fragment>
+  <>
+    <div>
+      <h1 className="heading3">
+        I am inside parent element (div1) using React Fragment 💯
+      </h1>
+    </div>
+    <div>
+      <h1 className="heading3">
+        I am inside another parent element (div2) using React Fragment 💯
+      </h1>
+    </div>
+  </>
+  // </React.Fragment>
+);
+console.log(ReactFrag());
+root3.render(<ReactFrag />);
