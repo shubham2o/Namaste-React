@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/shubham2o/Namaste-React#readme",
   "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "parcel": "^2.9.1",
     "process": "^0.11.10"
   },

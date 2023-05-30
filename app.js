@@ -6,6 +6,7 @@ const parent = React.createElement(
   "div",
   {
     id: "parent",
+    key: "header0",
     style: {
       backgroundColor: "red",
       color: "white",
@@ -16,6 +17,7 @@ const parent = React.createElement(
       "div",
       {
         id: "child1",
+        key: "header01",
       },
       [React.createElement("h1", {}, "This is Namaste React 🚀")],
       [React.createElement("h2", {}, "By Shubham Sharma")]
@@ -26,6 +28,7 @@ const parent = React.createElement(
       "div",
       {
         id: "child2",
+        key: "header02",
       },
       [React.createElement("h1", {}, "I am h1 tag")],
       [React.createElement("h2", {}, "I am h2 tag")]
@@ -40,6 +43,7 @@ const heading = React.createElement(
   {
     className: "heading",
     xyz: "abc",
+    key: "header11",
   },
   "Hello World from React!"
 );
@@ -48,7 +52,7 @@ console.log(heading);
 // React Element
 // JSX => HTML-like Or XML-like syntax
 const jsxHeading = (
-  <h1 className="heading1" xyz="abc">
+  <h1 className="heading1" xyz="abc" key="header12">
     Hello world from JSX 🎉
   </h1>
 );
@@ -57,7 +61,11 @@ root1.render(jsxHeading);
 
 const root2 = ReactDOM.createRoot(document.getElementById("header2"));
 // React Functional Component
-const Title = () => <h3 className="title">I am inside Title</h3>;
+const Title = () => (
+  <h3 className="title" key="header21">
+    I am inside Title
+  </h3>
+);
 
 // Component Composition (Component inside component)
 const number = 2000000;
@@ -65,7 +73,9 @@ const fullName = "I am under COMPONENT COMPOSITION.";
 
 const HeadingComponent = () => (
   <div id="container">
-    <h1 className="heading2">Namaste React Functional Component 🔥</h1>
+    <h1 className="heading2" key="header22">
+      Namaste React Functional Component 🔥
+    </h1>
     <Title />
     <Title></Title>
     {Title()}
@@ -85,12 +95,12 @@ const ReactFrag = () => (
   // <React.Fragment>
   <>
     <div>
-      <h1 className="heading3">
+      <h1 className="heading3" key="header31">
         I am inside parent element (div1) using React Fragment 💯
       </h1>
     </div>
     <div>
-      <h1 className="heading3">
+      <h1 className="heading3" key="header32">
         I am inside another parent element (div2) using React Fragment 💯
       </h1>
     </div>
