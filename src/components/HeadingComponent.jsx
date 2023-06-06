@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import JsxHeading from "./JsxHeading";
+// import { JsxHeading } from "./JsxHeading";
 
 const root2 = ReactDOM.createRoot(document.getElementById("header2"));
+
 // React Functional Component
 const Title = () => (
   <h3 className="title" key="header21">
@@ -29,6 +31,7 @@ const HeadingComponent = () => (
     {console.log(`You can console log in functional composition too.`)}
   </div>
 );
+
 console.log(HeadingComponent());
 root2.render(<HeadingComponent />);
 

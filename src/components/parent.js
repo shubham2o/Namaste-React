@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 const root = ReactDOM.createRoot(document.getElementById("header"));
+
 const parent = React.createElement(
   "div",
   {
@@ -35,6 +36,8 @@ const parent = React.createElement(
     ),
   ]
 );
+
+console.log(parent);
 root.render(parent);
 
 export default parent;

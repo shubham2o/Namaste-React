@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 const root3 = ReactDOM.createRoot(document.getElementById("header3"));
+
 // React Fragment (Helps to have more than one parent element and it behaves like an empty tag)
 const ReactFrag = () => (
   // <React.Fragment>
@@ -19,6 +20,7 @@ const ReactFrag = () => (
   </>
   // </React.Fragment>
 );
+
 console.log(ReactFrag());
 root3.render(<ReactFrag />);
 
